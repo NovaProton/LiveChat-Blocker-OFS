@@ -10,7 +10,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
     // Set badge to green (hidden state)
     chrome.action.setBadgeBackgroundColor({ color: "green" });
-    chrome.action.setBadgeText({ text: "ON" });
+    chrome.action.setBadgeText({ text: "Show" });
   }
 });
 
@@ -26,7 +26,7 @@ chrome.action.onClicked.addListener((tab) => {
 
   // Update badge color and text based on state
   const badgeColor = hideElements ? "green" : "red";
-  const badgeText = hideElements ? "ON" : "OFF";
+  const badgeText = hideElements ? "Show" : "Hiden";
   chrome.action.setBadgeBackgroundColor({ color: badgeColor });
   chrome.action.setBadgeText({ text: badgeText });
 });
