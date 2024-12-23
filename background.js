@@ -43,7 +43,7 @@ function applyAndObserve(hide) {
 
 // Inject the script to apply and observe element toggles
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === "complete" && tab.url.includes("oakfurnituresuperstore.co.uk")) {
+  if (changeInfo.status === "complete" && tab.url && tab.url.includes("oakfurnituresuperstore.co.uk")) {
     chrome.scripting.executeScript({
       target: { tabId },
       function: applyAndObserve,
