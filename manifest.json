@@ -9,6 +9,8 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Toggle Element Visibility"
+    "default_title": "DragonFly Helper",
+    "default_popup": "popup.html"
   }
+
 }
