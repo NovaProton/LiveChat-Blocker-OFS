@@ -14,7 +14,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://www.oakfurnituresuperstore.co.uk/*"],
       "js": ["contentScript.js"],
       "run_at": "document_idle"
     }
