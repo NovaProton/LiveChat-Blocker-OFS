@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LiveChat and Klaviyo Blocker",
+  "version": "1.4.5",
+  "description": "Hides LiveChat and Klaviyo elements on OakFurnitureSuperstore and toggles them on/off.",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://www.oakfurnituresuperstore.co.uk/*","https://oakfurniture.u.tomandco.uk/*","http://oakandmore.co.uk/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "DragonFly Helper",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.oakfurnituresuperstore.co.uk/*","*://oakfurniture.u.tomandco.uk/*","*://oakandmore.co.uk/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
